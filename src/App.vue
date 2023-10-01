@@ -7,6 +7,7 @@
       :next-question="next"
       :increment="increment"
     />
+    <Shimmer v-else />
     <Footer />
   </div>
 </template>
@@ -15,10 +16,11 @@
 import Footer from "./components/Footer.vue";
 import Header from "./components/Header.vue";
 import QuestionList from "./components/QuestionList.vue";
+import Shimmer from "./components/Shimmer.vue";
 
 export default {
   name: "App",
-  components: { Header, QuestionList, Footer },
+  components: { Header, QuestionList, Footer, Shimmer },
   data() {
     return {
       questions: [],
